@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Resume Analyzer</title>
+    <!-- Bootstrap 5 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="container mt-5">
+    <!-- Header Section -->
+    <div class="text-center mb-5">
+        <img src="assets/logo.png" alt="Logo" class="logo mb-3">
+        <h1 class="main-title">AI Resume Analyzer</h1>
+        <p class="subtitle">Upload your resume and get professional insights!</p>
+    </div>
+
+    <!-- Upload Section -->
+    <div class="card shadow-lg border-0 rounded-4 p-4">
+        <form action="/analyze" method="POST" enctype="multipart/form-data" class="custom-form">
+            <div class="mb-4">
+                <label for="resumeFile" class="form-label">Upload Resume (PDF/DOCX):</label>
+                <input type="file" class="form-control" id="resumeFile" name="resume" accept=".pdf, .docx" required />
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Analyze Resume</button>
+        </form>
+    </div>
+
+    <!-- Results Section -->
+    <div class="mt-5">
+        <div class="card shadow-lg border-0 rounded-4 p-4">
+            <h3 class="result-title mb-3">Analysis Result</h3>
+            <p class="result-score">Score: <span>92%</span></p>
+            <p class="result-feedback">Feedback: Your resume is detailed and includes technical keywords.</p>
+            <div class="result-jobs">
+                <strong>Job Suggestions:</strong>
+                <ul>
+                    <li>Software Engineer</li>
+                    <li>Data Scientist</li>
+                    <li>Machine Learning Engineer</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
